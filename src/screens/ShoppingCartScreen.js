@@ -45,7 +45,7 @@ class ShoppingCartScreen extends Component {
     const { cartProducts } = this.props;
     return (
       <SafeAreaView style={styles.container}>
-        <FlatList
+        {/* <FlatList
           data={cartProducts}
           // ListHeaderComponent={() => (
           //   <CartProductListHeader cartProducts={cartProducts} />
@@ -57,7 +57,7 @@ class ShoppingCartScreen extends Component {
             />
           )}
           keyExtractor={item => item.name}
-        />
+        /> */}
       </SafeAreaView>
     );
   }

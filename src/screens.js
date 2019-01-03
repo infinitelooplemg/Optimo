@@ -7,6 +7,7 @@ import ReduxThunk from "redux-thunk";
 import reducers from "./reducers";
 import ShoppingCartScreen from "./screens/ShoppingCartScreen";
 import Orders from "./screens/Orders";
+import StatesScreen from "./screens/StatesScreen";
 
 export function registerScreens() {
   const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
@@ -27,6 +28,13 @@ export function registerScreens() {
   Navigation.registerComponentWithRedux(
     "Orders",
     () => Orders,
+    Provider,
+    store
+  );
+
+  Navigation.registerComponentWithRedux(
+    "States",
+    () => StatesScreen,
     Provider,
     store
   );

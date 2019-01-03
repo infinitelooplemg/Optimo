@@ -11,33 +11,6 @@ Navigation.events().registerAppLaunchedListener(() => {
         children: [
           {
             stack: {
-              id: "HomeStack",
-              children: [
-                {
-                  component: {
-                    name: "Home",
-                    options: {
-                      topBar: {
-                        title: {
-                          text: "Productos"
-                        }
-                      },
-                      bottomTab: {
-                        text: "Productos",
-                        textColor: "gray",
-                        selectedTextColor: "#007aff",
-                        fontSize: 12,
-                        selectedIconColor: "#007aff",
-                        iconColor: "gray"
-                      }
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          {
-            stack: {
               id: "OrderStack",
               children: [
                 {
