@@ -41,7 +41,7 @@ export default class OrderStatus extends Component {
     const { current_state } = this.props;
     axios
       .get(
-        `http:${HOST}order_states/${current_state}?ws_key=${PRESTASHOP_API_KEY}&output_format=JSON`
+        `${HOST}order_states/${current_state}?ws_key=${PRESTASHOP_API_KEY}&output_format=JSON`
       )
       .then(({ data }) => {
         const { order_state } = data;

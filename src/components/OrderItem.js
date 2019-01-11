@@ -51,9 +51,9 @@ export default class OrderItem extends Component {
             current_state={current_state}
             changeOrderstate={this.changeOrderstate}
           />
-          <OrderCustomer customerId={id_customer} />
+          {/* <OrderCustomer customerId={id_customer} />
           <OrderAddress addressId={id_address_delivery} />
-          <OrderRows order_rows={order_rows} />
+          <OrderRows order_rows={order_rows} />  */}
         </View>
       );
     } else {
@@ -73,7 +73,7 @@ export default class OrderItem extends Component {
 
     axios
       .get(
-        `http:${HOST}orders/${id}?ws_key=${PRESTASHOP_API_KEY}&output_format=JSON`
+        `${HOST}orders/${id}?ws_key=${PRESTASHOP_API_KEY}&output_format=JSON`
       )
       .then(({ data }) => {
         const { order } = data;

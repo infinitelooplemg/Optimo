@@ -91,14 +91,17 @@ class StatesScreen extends Component {
     let config = {
       headers: { "Content-Type": "application/xml" }
     };
-    let url = `http:${HOST}orders/${state.id}?ws_key=${PRESTASHOP_API_KEY}`;
+    let url = `${HOST}orders/${state.id}?ws_key=${PRESTASHOP_API_KEY}`;
     axios
       .put(url, xml, config)
       .then(result => {
-        this.dismissScreen();
+        console.log('resultado',result);
+        
+         this.dismissScreen();
       })
       .catch(err => {
-        this.dismissScreen();
+        console.log('errorsito',err);
+         this.dismissScreen();
       });
   };
 

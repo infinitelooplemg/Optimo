@@ -2,13 +2,14 @@ import { ORDERS_FETCH_SUCCESS, RESET_ORDERS_REDUCER, ORDERS_FETCH_IS_LOADING } f
 const axios = require("axios");
 var _ = require("lodash");
 
+import {HOST,PRESTASHOP_API_KEY} from '../constants'
 export const getOrdersAction = () => {
   return dispatch => {
     dispatch({ type: ORDERS_FETCH_IS_LOADING});
 
     axios
       .get(
-        "http:127.0.0.1/~luis/prestashop_1.7.5.0/api/orders?ws_key=Z9C6PWC1JQ858UGW9NUZXTZADG1DXZ4N&output_format=JSON"
+        `${HOST}orders?ws_key=${PRESTASHOP_API_KEY}&output_format=JSON`
       )
       .then(({ data }) => {
         const { orders } = data;

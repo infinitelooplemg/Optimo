@@ -101,6 +101,8 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = ({ ordersReducer }) => {
   const { orders, isLoading } = ordersReducer;
+  console.log(orders);
+  
   return { orders, isLoading };
 };
 

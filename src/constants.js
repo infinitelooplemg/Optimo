@@ -1,8 +1,8 @@
 export const APPLE_BLUE_COLOR = "#007AFF";
 export const CANDY_RED_COLOR = "#ff0800";
 
-export const HOST = "127.0.0.1/~luis/prestashop_1.7.5.0/api/";
-export const PRESTASHOP_API_KEY = "Z9C6PWC1JQ858UGW9NUZXTZADG1DXZ4N";
+export const HOST = "https://www.pruebas.brandfly.mx/api/";
+export const PRESTASHOP_API_KEY = "IBF9QMBFXVSZ1DDKCQX4CJ9KFTFDXIT2";
 export const OUTPUT_FORMAT = "JSON";
 export const LIGHT_GRAY = "#F1F1F2";
 

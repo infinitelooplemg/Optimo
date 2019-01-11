@@ -61,7 +61,7 @@ export default class OrderCustomer extends Component {
     const { customerId } = this.props;
     axios
       .get(
-        `http:${HOST}customers/${customerId}?ws_key=${PRESTASHOP_API_KEY}&output_format=JSON`
+        `${HOST}customers/${customerId}?ws_key=${PRESTASHOP_API_KEY}&output_format=JSON`
       )
       .then(({ data }) => {
         const { customer } = data;
