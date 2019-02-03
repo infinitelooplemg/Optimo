@@ -25,6 +25,7 @@ Navigation.events().registerAppLaunchedListener(() => {
                       bottomTab: {
                         text: "Ordenes",
                         textColor: "gray",
+                        icon: require('./src/icons/box.png'),
                         selectedTextColor: "#007aff",
                         fontSize: 12,
                         selectedIconColor: "#007aff",
